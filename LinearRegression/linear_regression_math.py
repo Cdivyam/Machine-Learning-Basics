@@ -131,3 +131,27 @@ plt.plot(X_test, y_preds, color = 'r')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.show()
+
+#Rsquared Error
+def r_squared(X, Y):
+
+  n = X.shape[0]
+  sX = np.sum(X)
+  sY = np.sum(Y)
+  sXY = np.sum(np.multiply(X, Y))
+  sX2 = np.sum(np.square(X))
+  sY2 = np.sum(np.square(Y))
+  numerator = n*sXY - sX*sY
+
+  den = (n*sX2-sX**2)*(n*sY2-sY**2)
+  denominator = np.sqrt(den)
+
+  rsqr = numerator/denominator
+
+  return rsqr
+
+train_score = r_squared(X_train, y_train)
+print(train_score)
+
+# 98 % of outputs(Y_train) can be explained by our inputs(X_train)
+# similarly you can find test_score as well
