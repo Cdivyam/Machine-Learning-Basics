@@ -25,9 +25,9 @@ X = X.reshape(n,1)          # reshape from unranked array to ranked array
 X.shape
 
 Y = 20*X + 7 + np.random.normal(0, 0.8, X.shape)  # have linearly spaced numbers in Y with gausian noise
-Y.shape
+print(Y.shape)
 
-Y[:5]
+print(Y[:5])
 
 sns.set()
 sns.scatterplot(x = X[:, 0], y = Y[:, 0])         #Plot current dataset
