@@ -8,3 +8,5 @@ Dataset - Self Dummy Data
 ### Multivariate Linear Regression
 
 Dataset - Combined Cycle Power Plant
+
+### Classification
